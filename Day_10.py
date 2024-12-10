@@ -64,7 +64,6 @@ if __name__ == "__main__":
     for j, i in indices:
         trailheads.append((j, i))
 
-    leads_to_peak = {}
     # Start grid search
     all_trails = []
     for trailhead in trailheads:
@@ -77,7 +76,6 @@ if __name__ == "__main__":
             for trail in updated_trails:
                 f1, f2, f3, f4 = add_trailsteps(M, trail)
                 # Keep only the forks which continue
-                # print([f1, f2, f3, f4])
                 new_trails = [fork for fork in [f1, f2, f3, f4] if 'deadend' not in fork]
                 end_trails += new_trails
                 end_trails = [fork for fork in end_trails if len(fork) == i + 2]
@@ -96,7 +94,6 @@ if __name__ == "__main__":
     for j, i in indices:
         trailheads.append((j, i))
 
-    leads_to_peak = {}
     # Start grid search
     all_trails = []
     for trailhead in trailheads:
@@ -109,7 +106,6 @@ if __name__ == "__main__":
             for trail in updated_trails:
                 f1, f2, f3, f4 = add_trailsteps(M, trail)
                 # Keep only the forks which continue
-                #print([f1, f2, f3, f4])
                 new_trails = [fork for fork in [f1, f2, f3, f4] if 'deadend' not in fork]
                 end_trails += new_trails
                 # Remove old forks to ensure current path length is correct (after 0th iteration, path length is 2)
