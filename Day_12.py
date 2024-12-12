@@ -11,8 +11,8 @@ def expand_region(region, M, N, num):
                 region.append((j+1, i))
                 done = False
         if j-1 >= 0:
-            if M[j - 1, i] == sq_type and (j - 1, i) not in region:
-                region.append((j - 1, i))
+            if M[j-1, i] == sq_type and (j-1, i) not in region:
+                region.append((j-1, i))
                 done = False
         if i+1 <= M.shape[1]-1:
             if M[j, i+1] == sq_type and (j, i+1) not in region:
